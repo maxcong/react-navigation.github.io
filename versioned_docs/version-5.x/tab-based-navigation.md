@@ -71,10 +71,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({ route }) => ({
+        screenOptions={({ router }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-
+            let {route} = router
             if (route.name === 'Home') {
               iconName = focused
                 ? 'ios-information-circle'
